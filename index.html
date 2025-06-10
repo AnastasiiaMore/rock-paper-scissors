@@ -6,29 +6,86 @@
     </head>
     <body>
         <script>
-          // The game offers the user to play
-          // The user chooses whether he wants to play or not
-          // The game offers the user to choose one of the three options: "rock", "scissors", "paper"
-          // After the user chooses, the program randomly chooses one of the three options as well
-          // The results are compared
-          // If the computer chose rock, and the user scissors
-          // Then the text "rock beats scissors, you lose" is displayed
-          // If the computer chose rock, and the user paper
-          // Then the text: "paper covers rock, you win" is displayed
-          // If the computer chose rock, and the user stone
-          // Then the text: "draw, let's try again"
-          // If the computer chose scissors, and the user stone
-          // Then the text: "rock beats scissors, you win" is displayed
-          // If the computer chose scissors, and the user paper
-          // Then the text: "scissors cut paper, you lose" is displayed
-          // If the computer chose scissors, and the user chooses scissors
-          // Then the text is printed: "Die, let's try again"
-          // If the computer chose paper, and the user chose rock
-          // Then the text is printed: "Paper covers rock, you lose"
-          // If the computer chose paper, and the user chooses scissors
-          // Then the text is printed: "Scissors cut paper, you win"
-          // If the computer chose paper, and the user chooses paper
-          // Then the text is printed: "Die, let's try again" 
+         // The game offers the user to play
+         // The user chooses whether they want to play or not
+         // The game prompts the user to choose one of the three options: "rock", "scissors", or "paper"
+         // After the user makes a choice, the program randomly selects one of the three options as well
+         // The results are compared
+
+         // If the computer chooses rock and the user chooses scissors
+         // Then the text "Rock beats scissors, you lose" is displayed
+
+         // If the computer chooses rock and the user chooses paper
+         // Then the text "Paper covers rock, you win" is displayed
+
+         // If the computer chooses rock and the user chooses rock
+         // Then the text "Draw, let's try again" is displayed
+
+         // If the computer chooses scissors and the user chooses rock
+         // Then the text "Rock beats scissors, you win" is displayed
+
+         // If the computer chooses scissors and the user chooses paper
+         // Then the text "Scissors cut paper, you lose" is displayed
+
+         // If the computer chooses scissors and the user chooses scissors
+         // Then the text "Draw, let's try again" is displayed
+
+         // If the computer chooses paper and the user chooses rock
+         // Then the text "Paper covers rock, you lose" is displayed
+
+         // If the computer chooses paper and the user chooses scissors
+         // Then the text "Scissors cut paper, you win" is displayed
+
+         // If the computer chooses paper and the user chooses paper
+         // Then the text "Draw, let's try again" is displayed
+         
+            let openText = prompt("Do you want to play with me? ");
+            if (openText == "yes") {
+                let good = prompt("Super! Make your choice: rock, scissors, or paper?");
+                if (good === "rock") {
+                    function getComputerChoice(compChoice) {
+                        let randomChoice = Math.floor(Math.random() * 10);
+                        if (randomChoice > 0 && randomChoice <= 3) {
+                            alert("Oh no, I chose scissors, rock beats scissors(((  You win!");
+                    
+                        } else if (randomChoice > 3 && randomChoice <= 6) {
+                            alert("Oh yes, I chose paper, paper covers rock! You lose!");
+                        } else if (randomChoice > 6 && randomChoice <= 9) {
+                            alert("It`s a draw. I also chose rock, let`s try again!");
+                        };
+                    }
+                    console.log(getComputerChoice());
+                    
+                } else if (good === "scissors") {
+                    function getComputerChoice(compChoice) {
+                        let randomChoice = Math.floor(Math.random() * 10);
+                        if (randomChoice > 0 && randomChoice <= 3) {
+                            alert("Oh no, I chose paper, scissors cut paper(((   You win!");
+                        } else if (randomChoice > 3 && randomChoice <= 6) {
+                            alert("Oh yes, I chose rock, rock beats scissors! You lose!");
+                        } else if (randomChoice > 6 && randomChoice <= 9) {
+                            alert("It`s a draw. I also chose scissors, let`s try again!");
+                        };
+                    }
+                    console.log(getComputerChoice());
+                } else if (good === "paper") {
+                    function getComputerChoice(compChoice) {
+                        let randomChoice = Math.floor(Math.random() * 10);
+                        if (randomChoice > 0 && randomChoice <= 3) {
+                            alert("Oh no, I chose rock, paper covers rock(((   You win!");
+                        } else if (randomChoice > 3 && randomChoice <= 6) {
+                            alert("Oh yes, I chose scissors, scissors cut paper! You lose!");
+                        } else if (randomChoice > 6 && randomChoice <= 9) {
+                            alert("It`s a draw. I also chose paper, let`s try again!");
+                        };
+                    }
+                    console.log(getComputerChoice());
+                }
+                
+            } else if (openText == "no") {
+                alert("Oh nooo");
+            };
+
   
         </script>
     </body>
