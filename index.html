@@ -38,7 +38,9 @@
 
          // If the computer chooses paper and the user chooses paper
          // Then the text "Draw, let's try again" is displayed
-         
+
+         /* FIRST VERSION:
+
             let openText = prompt("Do you want to play with me? ");
             if (openText == "yes") {
                 let good = prompt("Super! Make your choice: rock, scissors, or paper?");
@@ -84,7 +86,29 @@
                 
             } else if (openText == "no") {
                 alert("Oh nooo");
-            };
+            }; */
+
+            let openText = prompt("Do you want to play with me? ");
+            if (openText == "yes") {
+                let good = prompt("Super! Make your choice: rock, scissors, or paper?");
+                function getHumanChoice() {
+                        return good; 
+                    };
+                function getComputerChoice() {
+                        let randomChoice = Math.floor(Math.random() * 10);
+                        if (randomChoice > 0 && randomChoice <= 3) {
+                            return("rock");
+                        } else if (randomChoice > 3 && randomChoice <= 6) {
+                            return("paper");
+                        } else if (randomChoice > 6 && randomChoice <= 9) {
+                            return("scissors");
+            }}
+        
+        
+        }
+            
+
+
 
   
         </script>
