@@ -98,6 +98,7 @@
                 
 
                 function getComputerChoice() {
+                    /* My first variant:
                         let randomChoice = Math.floor(Math.random() * 10);
                         if (randomChoice >= 0 && randomChoice <= 3) {
                             return("rock");
@@ -105,7 +106,17 @@
                             return("paper");
                         } else if (randomChoice > 6 && randomChoice <= 9) {
                             return("scissors");
-                        }
+                        }*/
+                    // My second variant(better):
+
+                    let randomChoice = Math.random();
+                    if (randomChoice < 1 / 3) {
+                        return "rock";
+                    } else if (randomChoice < 2 / 3) {
+                        return "paper";
+                    } else {
+                        return "scissors";
+                    }
                 }
 
                 let humanScore = 0;
@@ -153,7 +164,7 @@
             } else {
                 alert("Please answer 'yes' or 'no'");
             }  
-            
+
             
         
 
