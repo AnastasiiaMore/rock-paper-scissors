@@ -111,6 +111,8 @@
                 let humanScore = 0;
                 let computerScore = 0;
                 
+                function playGame() {
+                    for (let i = 0; i < 5; i++) {
                 function playRound(player, computer) {
                     
                     if (player === computer) {
@@ -129,14 +131,22 @@
                         
                     }
                 
-                }
+                } 
                 let humanChoice = getHumanChoice();
                 let computerChoice = getComputerChoice();
                 alert("Computer choice: " + computerChoice);
                 alert(playRound(humanChoice, computerChoice));
                 alert("Your score is: " + humanScore + "; " + "Computer score is: " + computerScore + ".");
-            
-                
+                } if (humanScore > computerScore) {
+                    alert("You won the game!");
+                } else if (humanScore < computerScore) {
+                    alert("Computer won this game!");
+                } else {
+                    alert("It`s a tie!");
+                }
+                }
+
+                alert(playGame());
                 
         } else if (openText == "no") {
                 alert("Oh nooo");
