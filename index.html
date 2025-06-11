@@ -127,7 +127,7 @@
                         
                     } else {
                         computerScore++;
-                        return "you lose!";
+                        return "You lose!";
                         
                     }
                 
@@ -136,11 +136,11 @@
                 let computerChoice = getComputerChoice();
                 alert("Computer choice: " + computerChoice);
                 alert(playRound(humanChoice, computerChoice));
-                alert("Your score is: " + humanScore + "; " + "Computer score is: " + computerScore + ".");
+                alert("Your score: " + humanScore + "; " + "Computer score: " + computerScore + ".");
                 } if (humanScore > computerScore) {
                     alert("You won the game!");
                 } else if (humanScore < computerScore) {
-                    alert("Computer won this game!");
+                    alert("The computer won this game!");
                 } else {
                     alert("It`s a tie!");
                 }
@@ -149,10 +149,11 @@
                 alert(playGame());
                 
         } else if (openText == "no") {
-                alert("Oh nooo");
+                alert("Oh nooo(");
             } else {
                 alert("Please answer 'yes' or 'no'");
-            }
+            }  
+            
             
         
 
